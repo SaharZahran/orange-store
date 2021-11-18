@@ -1,57 +1,3 @@
-<?php 
-$phones = [
-    [ 
-     'name' => 'Samsung Galaxy Note 20 Ultra',
-     'img_url' =>'https://eshop.orange.jo/app-images/thumbs/0001115_samsung-galaxy-note-20-ultra_220.png',
-    'rate' => '5',
-    'brand' => 'Samsung',
-    'price' => 'JOD 759.00',
-    'is_out_of_stock' => '1'
-    ],
-    [ 
-     'name' => 'INFINIX Zero 8',
-     'img_url' =>'https://eshop.orange.jo/app-images/thumbs/0001278_infinix-zero-8_220.jpeg',
-    'rate' => '0',
-    'brand' => 'Infinix',
-    'price' => 'JOD 205.00',
-    'is_out_of_stock' => '1'
-    ],
-    [ 
-     'name' => 'Apple iPhone 12 Pro',
-     'img_url' =>'https://eshop.orange.jo/app-images/thumbs/0001495_apple-iphone-12-pro_220.jpeg',
-    'rate' => '0',
-    'brand' => 'Apple',
-    'price' => 'JOD 973.00',
-    'is_out_of_stock' => '1'
-
-    ],
-    [ 
-     'name' => 'ITEL A48',
-     'img_url' =>'https://eshop.orange.jo/app-images/thumbs/0001495_apple-iphone-12-pro_220.jpeg',
-    'rate' => '0',
-    'brand' => 'iTel',
-    'price' => 'JOD 66.00'
-    ],
-    [ 
-     'name' => 'Samsung Galaxy S21 Ultra',
-     'img_url' =>'https://eshop.orange.jo/app-images/thumbs/0001485_samsung-galaxy-s21-ultra_220.jpeg',
-
-    'rate' => '0',
-    'brand' => 'Samsung',
-    'price' => 'JOD 799.00'
-    ],
-    
-    [ 
-     'name' => 'Galaxy A52',
-     'img_url' =>'https://eshop.orange.jo/app-images/thumbs/0002097_galaxy-a52_220.jpeg',
-    'rate' => '0',
-    'brand' => 'Samsung',
-    'price' => 'JOD 267.00'
-    ],
-];
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -62,6 +8,8 @@ $phones = [
     <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
 <link href="https://cdn.jsdelivr.net/npm/boosted@5.1.3/dist/css/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-ARRzqgHDBP0PQzxQoJtvyNn7Q8QQYr0XT+RXUFEPkQqkTB6gi43ZiL035dKWdkZe" crossorigin="anonymous">
 <link href="https://cdn.jsdelivr.net/npm/boosted@5.1.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-Di/KMIVcO9Z2MJO3EsrZebWTNrgJTrzEDwAplhM5XnCFQ1aDhRNWrp6CWvVcn00c" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -103,5 +51,87 @@ $phones = [
   </div>
 </nav>
 <script src="https://cdn.jsdelivr.net/npm/boosted@5.1.3/dist/js/boosted.bundle.min.js" integrity="sha384-5thbp4uNEqKgkl5m+rMBhqR+ZCs+3iAaLIghPWAgOv0VKvzGlYKR408MMbmCjmZF" crossorigin="anonymous"></script>
+<?php 
+$phones = [
+    [ 
+     'name' => 'Samsung Galaxy Note 20 Ultra',
+     'img_url' =>'https://eshop.orange.jo/app-images/thumbs/0001115_samsung-galaxy-note-20-ultra_220.png',
+    'rate' => '5',
+    'brand' => 'Samsung',
+    'price' => '759',
+    'is_out_of_stock' => '1'
+    ],
+    [ 
+     'name' => 'INFINIX Zero 8',
+     'img_url' =>'https://eshop.orange.jo/app-images/thumbs/0001278_infinix-zero-8_220.jpeg',
+    'rate' => '0',
+    'brand' => 'Infinix',
+    'price' => '205',
+    'is_out_of_stock' => '1'
+    ],
+    [ 
+     'name' => 'Apple iPhone 12 Pro',
+     'img_url' =>'https://eshop.orange.jo/app-images/thumbs/0001495_apple-iphone-12-pro_220.jpeg',
+    'rate' => '0',
+    'brand' => 'Apple',
+    'price' => '973',
+    'is_out_of_stock' => '1'
+
+    ],
+    [ 
+     'name' => 'ITEL A48',
+     'img_url' =>'https://eshop.orange.jo/app-images/thumbs/0001532_itel-a48_220.jpeg',
+    'rate' => '0',
+    'brand' => 'iTel',
+    'price' => '66'
+    ],
+    [ 
+     'name' => 'Samsung Galaxy S21 Ultra',
+     'img_url' =>'https://eshop.orange.jo/app-images/thumbs/0001485_samsung-galaxy-s21-ultra_220.jpeg',
+
+    'rate' => '0',
+    'brand' => 'Samsung',
+    'price' => '799'
+    ],
+    
+    [ 
+     'name' => 'Galaxy A52',
+     'img_url' =>'https://eshop.orange.jo/app-images/thumbs/0002097_galaxy-a52_220.jpeg',
+    'rate' => '0',
+    'brand' => 'Samsung',
+    'price' => '267'
+    ],
+];
+echo "<div class='container grid'>";
+foreach ($phones as $phone) {
+ echo "<div class='card g-col-4' style='width: 18rem;'>
+  <img src='$phone[img_url]' class='card-img-top' alt='mobile photo'>
+  <div class='card-body'>
+    <p class='brand'>$phone[brand]</p>
+    <h3 class='card-title'>$phone[name]</h3>";
+  for($i=0; $i<5; $i++){
+    if($phone['rate'] >0){
+      echo '<i class="fas fa-star gold_star"></i>';
+    }else{
+      echo '<i class="fas fa-star"></i>';
+    }
+  }  
+ echo " ";
+ echo "<span>($phone[rate])</span>
+      <br>
+      <a href='#'>View Details <i class='fas fa-chevron-right'></i></a>
+      <hr>
+      <p class='price'>JOD <span>$phone[price]</span>.00</p>
+ ";
+
+ echo "<div class='buttons_box'>
+ <a href='#' class='btn btn-primary '>Bye Now</a>
+ <a href='#' class='btn cart'><i class='fas fa-shopping-cart'></i></a>
+ </div>
+  </div>
+  </div>";
+ }
+echo "</div>";
+?>
 </body>
 </html>
